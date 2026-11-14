@@ -84,13 +84,13 @@ flowchart TD
 
 <sub>These are client-reported order counts, not a measured conversion-rate, revenue or profit uplift.</sub>
 
-**Can I claim a percentage of fake orders prevented?**  
-Not responsibly from the current evidence. The implementation documents the safeguards above, but it does not contain a measured denominator of fraudulent attempts, duplicate submissions or rejected payments. I therefore do **not** claim that the system prevents a specific percentage of fake orders.
+**Security impact**
 
-A defensible metric can be measured from production event logs:
-- **Duplicate checkout suppression rate** = duplicate checkout submissions safely deduplicated ÷ all identified repeated checkout submissions.
-- **Unverified payment rejection rate** = invalid or mismatched payment attempts rejected ÷ all payment-verification attempts.
-- **COD return/no-show rate** should be tracked separately. Razorpay verification protects online-payment state; it cannot prove that a cash-on-delivery customer will accept the parcel.
+Layered server-side controls strengthen checkout integrity by reducing opportunities for price tampering, forged payment confirmations, duplicate order creation and replayed webhook events. Payment-aware inventory and refund handling also help keep order, payment and stock records consistent.
+
+The result is a more resilient checkout and order-management workflow: repeated checkout attempts are guarded by idempotency, online orders are confirmed only after backend verification, and gateway events are authenticated and deduplicated.
+
+<sub>These are documented application safeguards and risk-reduction outcomes, not a measured percentage of fraudulent orders prevented. Actual prevention rates would require production telemetry showing attempted and rejected events.</sub>
 
 **Technology:** `HTML` `CSS` `JavaScript` `Node.js` `Express` `MongoDB` `Mongoose` `Razorpay` `Resend` `JWT` `bcryptjs` `Helmet` `CORS` `express-rate-limit`
 
@@ -115,6 +115,24 @@ Visitors needed a clear way to understand the company's services, review complet
 
 **Technology:** `React 18` `Vite` `Tailwind CSS` `React Router` `Framer Motion` `GSAP` `Three.js` `React Three Fiber`
 
+**Experience workflow**
+
+```mermaid
+flowchart LR
+    A[Visitor lands on website] --> B[Home / brand introduction]
+    B --> C[Explore services]
+    B --> D[Browse project portfolio]
+    B --> E[Review safety information]
+    C --> F[Understand capabilities]
+    D --> F
+    E --> F
+    F --> G[Contact / enquiry CTA]
+    G --> H[Enquiry hand-off]
+    I[Scroll interaction] --> J[GSAP / ScrollTrigger]
+    J --> K[Interactive 3D construction sequence]
+    K --> L[Progressive visual storytelling]
+```
+
 <sub>Impact: improved the organisation and presentation of business information. No verified traffic, enquiry or conversion baseline is available, so no percentage uplift is claimed. The link opens the project preview in the Varun & Co. portfolio, not a standalone construction-site URL.</sub>
 
 ---
@@ -135,6 +153,21 @@ The website needed to communicate what the studio does, how projects are deliver
 - Consistent visual language with motion-led interactions.
 
 **Technology:** `React` `TypeScript` `Tailwind CSS` `Motion for React` `Lucide React` `Custom CSS`
+
+**Visitor-to-enquiry workflow**
+
+```mermaid
+flowchart TD
+    A[New visitor] --> B[Brand positioning / hero]
+    B --> C[Explore service categories]
+    C --> D[Review selected work]
+    D --> E[Understand five-stage process]
+    E --> F[Resolve questions in FAQ]
+    F --> G[Start a project / contact]
+    G --> H[Enquiry hand-off]
+    D --> I[Build trust through project examples]
+    I --> G
+```
 
 <sub>Impact: created a structured service-discovery and enquiry experience. Lead-generation and conversion percentages are not claimed without verified analytics.</sub>
 
@@ -158,6 +191,25 @@ The store needed more than static product pages: customers needed a complete sho
 
 **Technology:** `HTML` `CSS` `JavaScript` `Node.js` `Express` `MongoDB Atlas` `Razorpay` `Resend`
 
+**Commerce workflow**
+
+```mermaid
+flowchart TD
+    A[Admin maintains catalogue] --> B[Products and prices saved to MongoDB]
+    B --> C[Customer browses hardware]
+    C --> D[Select product and quantity]
+    D --> E[Cart]
+    E --> F[Checkout]
+    F --> G[Backend validates order data]
+    G --> H[Payment hand-off]
+    H --> I[Payment response / order processing]
+    I --> J[Order stored]
+    J --> K[Order history]
+    J --> L[Confirmation email]
+    A --> M[Admin reviews orders and inventory]
+    J --> M
+```
+
 <sub>Impact: brought customer shopping and owner-side catalogue management into one application. No verified sales, time-saving or conversion baseline is available. The portfolio currently displays this project as VarunTechStore; VishalTechStore is the name used in my project list. The link is a portfolio preview, not a standalone store URL.</sub>
 
 ---
@@ -175,7 +227,23 @@ A Python / Flask-based Windows endpoint-monitoring lab using Sysmon telemetry an
 
 **Technology:** `Python` `Flask` `Sysmon` `Windows Event Logs` `PowerShell` `MITRE ATT&CK`
 
-**Project-reported engineering result:** approximately **30–40% less false-positive noise** after detection-rule tuning in project testing. This is not an independently audited benchmark.
+**Detection and investigation workflow**
+
+```mermaid
+flowchart TD
+    A[Windows endpoint activity] --> B[Sysmon telemetry]
+    B --> C[Windows Event Logs]
+    C --> D[Python event processing]
+    D --> E[Detection rule evaluation]
+    E --> F[Severity and confidence enrichment]
+    F --> G[MITRE ATT&CK technique mapping]
+    G --> H[Related-event / attack-chain correlation]
+    H --> I[Flask security dashboard]
+    I --> J[Analyst reviews alert context]
+    J --> K[Investigate and validate activity]
+```
+
+**Project-reported engineering result:** approximately **30–40% less false-positive noise** after detection-rule tuning in project testing. This result belongs to the SIEM lab and is separate from the StrydeGoSox e-commerce security controls.
 
 ---
 
