@@ -2,12 +2,12 @@
   <img src="assets/varun-profile-banner.svg" alt="Varun Gupta — Full-Stack Developer" width="100%" />
   <h1>Varun Gupta</h1>
   <h3>Junior Full-Stack Developer · React · Node.js · MongoDB</h3>
-  <p>Mumbai, India · Open to junior full-stack, React and Node.js opportunities</p>
-  <p>Building useful web products with thoughtful interfaces, dependable APIs and clear data flows.</p>
+  <p>Mumbai, India · Open to Junior Full-Stack, React and Node.js opportunities</p>
+  <p>Building real-world web experiences with responsive interfaces, dependable application workflows and thoughtful engineering.</p>
   <p>
     <a href="https://blue-crab-314523.hostingersite.com"><img src="https://img.shields.io/badge/PORTFOLIO-Explore%20my%20work-172b4d?style=for-the-badge" alt="Portfolio"/></a>
     <a href="https://strydegosox.com"><img src="https://img.shields.io/badge/LIVE%20CLIENT%20PROJECT-StrydeGoSox-126b67?style=for-the-badge" alt="StrydeGoSox live store"/></a>
-    <a href="https://github.com/varung4067-hash?tab=repositories"><img src="https://img.shields.io/badge/GITHUB-Explore%20repositories-24292f?style=for-the-badge&logo=github" alt="Repositories"/></a>
+    <a href="https://github.com/varung4067-hash?tab=repositories"><img src="https://img.shields.io/badge/GITHUB-Explore%20repositories-24292f?style=for-the-badge&logo=github" alt="GitHub repositories"/></a>
   </p>
 </div>
 
@@ -15,124 +15,293 @@
 
 ## About
 
-I'm a Mumbai-based full-stack developer and BSc IT graduate who enjoys turning business requirements into working web applications. I work across responsive frontend experiences, REST APIs, database-backed workflows, authentication, payment integrations and admin tools.
+I'm a Mumbai-based full-stack developer and BSc IT graduate interested in building useful digital products from the user interface through backend workflows and data. My practical work includes a live client e-commerce platform, business websites, product discovery experiences and a Python-based Windows telemetry lab.
 
-My strongest practical example is **StrydeGoSox**, a live client e-commerce platform. I worked across the storefront, Node.js/Express backend, MongoDB data layer, Razorpay payment flow and store-administration workflows. I also build security-focused projects to understand endpoint telemetry, detection logic and investigation workflows.
+I enjoy connecting the pieces that make an application useful in the real world: responsive interfaces, API contracts, database-backed workflows, authentication, payment integrations, inventory and operational dashboards. I pay particular attention to what happens beyond the happy path — invalid input, stale prices, duplicate requests, failed payments, webhook retries and permission boundaries.
 
-I care about the parts of software that matter after the first demo: trusted server-side calculations, input validation, authentication boundaries, retries, consistent order state, useful error handling and interfaces that remain usable across screen sizes. I use AI-assisted tools as part of my workflow, while focusing on understanding the code, integrating components, debugging issues and validating the behaviour.
+I use AI-assisted development tools as part of my workflow, while focusing on understanding the implementation, integrating components, debugging issues and validating the behaviour of the finished application.
 
-**Currently looking for:** Junior Full-Stack Developer, React Developer or Node.js Developer roles where I can contribute to real products, learn from experienced engineers and grow through code reviews and collaboration.
+**Currently seeking:** Junior Full-Stack Developer, React Developer and Node.js Developer opportunities in Mumbai.
 
-### How I think about full-stack architecture
+### How I approach application architecture
 
-A useful product is more than a collection of screens. The interface, application rules, persistent data and external services need clear boundaries. The diagram below uses the StrydeGoSox implementation as a concrete example of how those layers connect.
+I think about a product as a set of connected responsibilities rather than isolated screens. The diagram below uses the StrydeGoSox client application to show how the browser experiences, backend business logic, persisted data and external services interact.
 
 <p align="center">
   <a href="https://github.com/varung4067-hash/strydegosox-ecommerce/blob/main/docs/ARCHITECTURE.md">
-    <img src="https://raw.githubusercontent.com/varung4067-hash/strydegosox-ecommerce/main/docs/architecture-diagram.svg" alt="StrydeGoSox application architecture: customer storefront and admin console, Express API and middleware, MongoDB persistence, Razorpay payments and Resend email" width="100%" />
+    <img src="https://raw.githubusercontent.com/varung4067-hash/strydegosox-ecommerce/main/docs/architecture-diagram.svg" alt="StrydeGoSox architecture: storefront and admin interfaces, Express application, MongoDB, Razorpay and Resend" width="100%" />
   </a>
 </p>
-<p align="center"><sub>Project-specific architecture diagram · Select the diagram to read the detailed architecture and workflow notes.</sub></p>
+<p align="center"><sub>Project-specific architecture · Select the diagram for detailed runtime, checkout, inventory and trust-boundary notes.</sub></p>
 
-| Layer | Responsibility | Technologies / components |
+| Application layer | Responsibility | Technologies |
 |:--|:--|:--|
-| Experience | Customer storefront and authenticated admin console | HTML, CSS, JavaScript |
-| Application | Routing, business rules, auth, checkout, payments and operations | Node.js, Express.js, middleware |
-| Persistence | Users, products, orders, settings and webhook-event records | MongoDB, Mongoose |
-| Integrations | Payment processing and transactional email | Razorpay, Resend |
-| Transaction controls | Server-side repricing, signature checks, idempotency and inventory state transitions | Backend validation and workflow logic |
-
-**Engineering decisions I pay attention to:** the browser is treated as an input surface rather than the source of truth for price or payment status; payment callbacks are verified on the server; webhook events and checkout retries are handled with duplicate processing in mind; and inventory moves through explicit reservation, commit and release steps.
+| Experience | Customer-facing pages and admin workflows | HTML, CSS, JavaScript |
+| Application | Routing, business rules, authentication, checkout and order operations | Node.js, Express.js |
+| Data | Users, products, orders, inventory and event records | MongoDB, Mongoose |
+| Integrations | Payment processing and customer communication | Razorpay, Resend |
+| Trust boundaries | Server-side validation, verified payment events, access control and idempotent workflows | Backend middleware and application services |
 
 ---
 
-## Featured projects
+# Featured projects
 
-### 01 · StrydeGoSox — Live client e-commerce platform
+## 01 · StrydeGoSox — Live client e-commerce platform
 
-<p><strong>Full-stack development · Checkout and payments · Inventory · Admin operations</strong></p>
+<sub>Full-stack development · Payments · Inventory · Order operations · Client delivery</sub>
 
-**The product:** a live online store for a consumer product brand, connecting product discovery, product options, cart, checkout, online payments, Cash on Delivery, order fulfilment and the tools used to operate the store.
+<p align="center">
+  <a href="https://strydegosox.com">
+    <img src="https://raw.githubusercontent.com/varung4067-hash/strydegosox-ecommerce/main/docs/screenshots/01-home-hero.jpg" alt="Actual StrydeGoSox storefront screenshot" width="100%" />
+  </a>
+</p>
 
-**My contribution**
-- Built and integrated responsive storefront, product-selection, cart and checkout experiences.
-- Developed backend API workflows with Node.js, Express.js, MongoDB and Mongoose.
-- Implemented server-side cart repricing so order totals are calculated from trusted catalogue records.
-- Integrated Razorpay order creation, payment-signature verification and signed webhook processing.
-- Added checkout idempotency and webhook-event tracking to reduce duplicate order and payment side effects.
-- Worked on inventory reservation, commit, release and restoration across order and payment states.
-- Built admin workflows for catalogue, stock, orders, fulfilment, COD collection/remittance and refunds.
+**Overview**
+
+StrydeGoSox is a live e-commerce platform developed for a consumer product brand. It connects product discovery and product options with cart, checkout, online payments, Cash on Delivery, fulfilment and the administrative workflows needed to operate the store.
+
+**My contribution and engineering work**
+- Built and integrated the responsive storefront, product-detail experience, product options, cart and checkout journey.
+- Developed backend API workflows with Node.js and Express.js, using MongoDB and Mongoose for application data.
+- Implemented server-side cart repricing so the backend calculates order totals using trusted catalogue records rather than accepting browser-submitted prices.
+- Integrated Razorpay order creation and server-side payment-signature verification.
+- Implemented signed webhook handling and event tracking to reconcile payment events and reduce duplicate side effects.
+- Added checkout idempotency so retried submissions can be handled as one intended checkout operation.
+- Worked on inventory reservation, commit, release and restoration as orders and payments change state.
+- Built authenticated admin workflows for catalogue and stock management, order processing, fulfilment, COD collection and remittance, and refunds.
 - Integrated transactional order and status emails through Resend.
 
-**Real application screenshots**
+**Application architecture**
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/varung4067-hash/strydegosox-ecommerce/main/docs/screenshots/01-home-hero.jpg" alt="Actual StrydeGoSox storefront screenshot" width="100%" />
-</p>
-<p align="center">
-  <a href="https://raw.githubusercontent.com/varung4067-hash/strydegosox-ecommerce/main/docs/screenshots/02-product-specifications.jpg">Product details screenshot</a>
-  &nbsp;·&nbsp;
-  <a href="https://raw.githubusercontent.com/varung4067-hash/strydegosox-ecommerce/main/docs/screenshots/03-bundle-options.jpg">Bundle selection screenshot</a>
+  <a href="https://github.com/varung4067-hash/strydegosox-ecommerce/blob/main/docs/ARCHITECTURE.md">
+    <img src="https://raw.githubusercontent.com/varung4067-hash/strydegosox-ecommerce/main/docs/architecture-diagram.svg" alt="StrydeGoSox technical architecture diagram" width="100%" />
+  </a>
 </p>
 
-**Explore the implementation:** [Live store](https://strydegosox.com) · [Source code](https://github.com/varung4067-hash/strydegosox-ecommerce) · [Architecture and checkout flow](https://github.com/varung4067-hash/strydegosox-ecommerce/blob/main/docs/ARCHITECTURE.md) · [Security notes](https://github.com/varung4067-hash/strydegosox-ecommerce/blob/main/SECURITY.md)
+| Layer | Implementation |
+|:--|:--|
+| Customer experience | Storefront for catalogue browsing, product options, cart and checkout |
+| Admin experience | Protected dashboard for products, inventory, orders, fulfilment, COD and refunds |
+| API and business logic | Express routes and shared order, inventory, payment and email helpers |
+| Persistence | MongoDB models for users, products, orders, webhook events and store settings |
+| External services | Razorpay payment services and Resend transactional email |
 
-**Technology:** HTML · CSS · JavaScript · Node.js · Express.js · MongoDB · Mongoose · Razorpay · Resend · JWT
+**Security and reliability measures documented in the project**
+- **Trusted pricing:** the backend recalculates order totals from database catalogue records.
+- **Payment verification:** payment signatures and expected transaction values are checked server-side.
+- **Webhook integrity:** signed callbacks are validated and event records help prevent repeated processing.
+- **Idempotency:** checkout requests use an idempotency key to reduce duplicate order creation on retries.
+- **Inventory consistency:** stock is reserved, committed, released or restored through explicit order-state transitions.
+- **Admin access control:** protected routes use authentication and role checks; session tokens are carried in HTTP-only cookies.
+- **Application hardening:** the project documents Helmet, Content Security Policy, CORS controls, rate limits and request IDs.
+- **Secret handling:** database and provider credentials are kept in private environment configuration; .env is excluded from the public-ready package.
+
+**Validation evidence:** the latest dependency-security commit in the project reports npm ci, npm run check, npm run qa with 44/44 checks, and npm audit with zero vulnerabilities in GitHub Actions. This is evidence for that recorded run, not a guarantee that every future deployment is secure.
 
 **Client-reported activity:** the client reported 70 orders in the first week and 500+ orders in the first month after launch. These are client-reported order counts, not independently audited revenue or conversion figures.
 
-### 02 · Sysmon SIEM Homelab — Endpoint telemetry and detection engineering
+**Technology used**
 
-<p><strong>Python · Windows Sysmon · PowerShell detections · Flask dashboard · MITRE ATT&CK</strong></p>
+HTML5 · CSS3 · JavaScript · Node.js · Express.js · MongoDB · Mongoose · Razorpay · Resend · JWT · bcryptjs · Helmet
 
-A hands-on Windows endpoint-monitoring lab that explores how process-creation telemetry can be turned into structured alerts for analyst review.
+**Explore the project**
+
+[Live store](https://strydegosox.com) · [Source code](https://github.com/varung4067-hash/strydegosox-ecommerce) · [Architecture and checkout sequence](https://github.com/varung4067-hash/strydegosox-ecommerce/blob/main/docs/ARCHITECTURE.md) · [Security notes](https://github.com/varung4067-hash/strydegosox-ecommerce/blob/main/SECURITY.md)
+
+Additional real product screens: [Product details](https://github.com/varung4067-hash/strydegosox-ecommerce/blob/main/docs/screenshots/02-product-specifications.jpg) · [Bundle options](https://github.com/varung4067-hash/strydegosox-ecommerce/blob/main/docs/screenshots/03-bundle-options.jpg)
+
+---
+
+## 02 · Sai Shradha Construction — Construction company website
+
+<sub>React frontend · Responsive corporate website · Project showcase · Scroll-linked 3D experience</sub>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/varung4067-hash/soc-homelab-siem-project/main/DASHBOARD.png" alt="Actual dashboard screenshot from the Sysmon SIEM homelab project" width="100%" />
+  <img src="assets/screenshots/sai-shradha-construction.webp" alt="Actual Sai Shradha Construction website screenshot supplied for the project portfolio" width="100%" />
 </p>
-<p align="center"><sub>Detection pipeline: Sysmon Event ID 1 → Python event parsing → PowerShell indicators → alert enrichment → Flask investigation view.</sub></p>
+
+**Overview**
+
+A corporate website experience for a construction business, designed to present the company, explain its services and make its project portfolio easier to explore. The information architecture follows six primary sections: Home, About, Services, Projects, Safety and Contact.
+
+The visual direction pairs a construction-project hero with a clear navigation system, a prominent enquiry action and a structured company-information layout. The project is intended to communicate credibility, capabilities and a clear path for prospective clients to get in touch.
+
+**My contribution and frontend engineering**
+- Structured the website around the visitor journey: company introduction → services → projects → safety information → contact.
+- Built reusable React components and responsive page layouts for desktop and smaller screens.
+- Organised service and project content into clear, scannable sections.
+- Created project showcase and enquiry call-to-action areas to connect visitors with the business.
+- Developed a scroll-linked 3D construction sequence using GSAP / ScrollTrigger and Three.js with React Three Fiber.
+- Used Framer Motion for interface transitions and interaction details.
+- Considered responsive behaviour and reduced-motion fallbacks so visual effects do not become the only way to understand the content.
+
+**Website experience architecture**
+
+<p align="center">
+  <img src="assets/diagrams/sai-shradha-experience.svg" alt="Sai Shradha Construction website experience map showing visitor discovery, React sections, scroll-linked 3D visual and enquiry action" width="100%" />
+</p>
+<p align="center"><sub>Experience architecture: this diagram maps the visitor journey and frontend presentation layers; it is not a backend or database dependency diagram.</sub></p>
+
+| Frontend area | Technology | Purpose |
+|:--|:--|:--|
+| Page and component structure | React 18 | Reusable sections and UI composition |
+| Development and build | Vite | Frontend development and production bundling |
+| Styling and responsiveness | Tailwind CSS | Layout, spacing and responsive design |
+| Navigation | React Router | Page/section navigation structure |
+| UI motion | Framer Motion | Interface transitions and interaction feedback |
+| Scroll choreography | GSAP / ScrollTrigger | Scroll-linked animation timeline |
+| 3D presentation | Three.js / React Three Fiber | Interactive construction visualisation |
+
+**Security scope**
+
+This is documented as a public-facing corporate website experience. The available project material does not establish user accounts, payment processing or a private application API, so I do not claim authentication or payment-security controls for it. The security boundary for this type of site is to keep private credentials out of client-side bundles, serve the site over HTTPS, minimise third-party scripts, and validate and rate-limit any server-side contact/enquiry endpoint. These are production safeguards to verify against the deployed implementation rather than claims of a separate backend security system.
+
+**Technology used**
+
+React 18 · Vite · Tailwind CSS · React Router · Framer Motion · GSAP · ScrollTrigger · Three.js · React Three Fiber
+
+**Project visual:** the screenshot above is an actual supplied project screenshot, not generated concept artwork.
+
+---
+
+## 03 · VarunTechStore — PC components and custom-build store
+
+<sub>Hardware e-commerce · Component catalogue · Custom and pre-built PC discovery · Store workflows</sub>
+
+<p align="center">
+  <img src="assets/screenshots/varuntechstore.webp" alt="Actual VarunTechStore website screenshot supplied for the project portfolio" width="100%" />
+</p>
+
+**Overview**
+
+VarunTechStore is a hardware and PC-components store experience focused on helping customers discover computer parts, gaming systems and custom or pre-built PC options. Its catalogue navigation is organised around customer needs as well as hardware categories — including PCs for gaming, programming and productivity, gaming laptops, custom builds, graphics cards, processors and RAM.
+
+The main experience combines store navigation, department/category discovery, search and promotional product presentation. The wider application scope includes shopping-cart and checkout workflows, order history and product/inventory management.
+
+**My contribution and application scope**
+- Designed the store structure around departments, component categories and PC-use-case collections.
+- Organised product discovery for graphics cards, processors, memory, PC cases, motherboards and complete PC builds.
+- Worked on customer shopping workflows including product browsing, add-to-cart, checkout and order history.
+- Included administrative product and pricing management so catalogue changes do not require editing page markup.
+- Used MongoDB Atlas as the data store for product and inventory records.
+- Integrated the store workflow with Razorpay for online payments and Resend for transactional email.
+
+**High-level commerce architecture**
+
+<p align="center">
+  <img src="assets/diagrams/hardware-ecommerce.svg" alt="VarunTechStore high-level commerce map connecting customers and store administration to application workflows, MongoDB Atlas, Razorpay and Resend" width="100%" />
+</p>
+<p align="center"><sub>High-level architecture based on the documented project scope. Exact routes, schema details and provider callback handling should be checked against the implementation before treating them as verified internals.</sub></p>
+
+| Layer | Responsibility | Technology / service |
+|:--|:--|:--|
+| Storefront | Navigation, categories, product discovery and shopping journey | HTML, CSS, JavaScript |
+| Application | Product, cart, checkout and admin workflows | Node.js, Express.js |
+| Data | Product catalogue and inventory records | MongoDB Atlas |
+| Payments | Online payment handoff | Razorpay |
+| Email | Order and customer notifications | Resend |
+
+**Security and trust boundaries**
+
+For an e-commerce system, the critical security boundaries are server-side price and stock validation, authenticated and role-restricted admin operations, safe handling of customer information, and payment confirmation performed by the backend rather than inferred from a browser redirect. Razorpay secrets and email credentials must remain in server-side environment variables; payment signatures and webhooks should be validated server-side and retry handling should avoid duplicate order side effects.
+
+The available portfolio material describes the integrations and workflows but does not include a separate public source repository or test evidence for every control above. I therefore present these as the security boundaries and production checks for this project, not as independently verified implementation claims.
+
+**Technology used**
+
+HTML · CSS · JavaScript · Node.js · Express.js · MongoDB Atlas · Razorpay · Resend
+
+**Project visual:** the screenshot above is the actual supplied VarunTechStore page, not a generated website mockup.
+
+---
+
+## 04 · Varun & Co. — Digital studio website
+
+<sub>Studio website · Service positioning · Selected work · Project enquiry journey</sub>
+
+**Overview**
+
+Varun & Co. is a digital studio website built to communicate the studio's services, present selected work and guide prospective clients towards starting a project. Its positioning focuses on helping businesses turn into brands through useful digital experiences.
+
+**What the website includes**
+- Service categories covering Website Development, Business Software, Branding & Digital Presence, and Hosting & Support.
+- A five-stage delivery narrative: Discovery → Strategy → Design → Development → Launch.
+- Selected work, service details, FAQs and project-enquiry calls to action.
+- Responsive navigation, reusable interface sections and motion-led interactions intended to support the content rather than distract from it.
+
+**Website information architecture**
+
+<p align="center">
+  <img src="assets/diagrams/varun-co-website.svg" alt="Varun and Co website information architecture showing positioning, services, selected work, delivery process and project enquiry" width="100%" />
+</p>
+<p align="center"><sub>Website information architecture and visitor journey; no backend, database or authentication layer is implied by this diagram.</sub></p>
+
+**Technology used**
+
+React · TypeScript · Tailwind CSS · Motion for React · Lucide React · Custom CSS
+
+**Security scope**
+
+The available project description documents a studio/marketing website and does not establish account or payment functionality. The appropriate security focus is to avoid placing secrets in client-side code, use HTTPS, keep dependencies maintained, and validate and protect any project-enquiry endpoint on the server if one is connected. I do not claim a private backend or authentication system without source-level evidence.
+
+[Visit Varun & Co.](https://blue-crab-314523.hostingersite.com) · [Explore selected work](https://blue-crab-314523.hostingersite.com/#work)
+
+---
+
+## 05 · Sysmon SIEM Homelab — Endpoint telemetry and detection engineering
+
+<sub>Python · Windows Sysmon · PowerShell detection · Alert enrichment · Flask dashboard</sub>
+
+**Overview**
+
+A Windows endpoint-monitoring learning lab exploring how Sysmon process-creation telemetry can be converted into structured alerts for investigation. The current pipeline reads Sysmon Event ID 1 from the Microsoft-Windows-Sysmon/Operational channel, examines process command lines for suspicious PowerShell indicators and presents alert context in a Flask dashboard.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/varung4067-hash/soc-homelab-siem-project/main/DASHBOARD.png" alt="Actual Sysmon SIEM homelab Flask dashboard screenshot" width="100%" />
+</p>
+
+**Detection pipeline architecture**
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/varung4067-hash/soc-homelab-siem-project/main/docs/architecture.svg" alt="Sysmon SIEM architecture from Windows endpoint telemetry through Python parsing, detection rules and alert enrichment to a Flask dashboard" width="100%" />
+</p>
 
 **What I implemented and explored**
-- Read process-creation events from the Microsoft-Windows-Sysmon/Operational channel.
-- Added keyword-based triage rules for encoded PowerShell, FromBase64String, Invoke-Expression/IEX and DownloadString.
-- Enriched alerts with severity, confidence, detection rationale and MITRE ATT&CK technique T1059.001.
-- Added command-line deduplication and basic grouping of alerts that share a host and user within a ten-minute window.
-- Built a Flask dashboard for reviewing alert details, severity summaries and visualisations.
+- **Telemetry collection:** reads Windows Sysmon process-creation events (Event ID 1).
+- **Event parsing:** uses Python, Windows event APIs and XML parsing to extract process context.
+- **PowerShell triage rules:** looks for indicators including encoded PowerShell (-enc), FromBase64String, Invoke-Expression / IEX, and DownloadString.
+- **Alert enrichment:** attaches severity, a confidence value, a detection rationale and MITRE ATT&CK technique T1059.001.
+- **Noise reduction:** deduplicates matching command lines in the Sysmon agent.
+- **Basic correlation:** groups alerts that share a host and user within a ten-minute window.
+- **Investigation interface:** a Flask dashboard presents alert details, severity summaries and visualisations.
 
-**Be clear about the scope:** this is a learning and experimentation project, not a production SIEM. The current rules are heuristic triage signals, not proof of compromise. The repository documents remaining work around packaging, dependency setup, test fixtures and separating demo data from live telemetry.
+**Security interpretation and limitations**
 
-[Source code and documentation](https://github.com/varung4067-hash/soc-homelab-siem-project) · [Detection architecture](https://github.com/varung4067-hash/soc-homelab-siem-project/blob/main/docs/architecture.svg)
+This is a learning and experimentation project, not a production SIEM or endpoint security product. Its keyword-based detections are triage signals, not proof of compromise; legitimate administration can use some of the same commands and the surrounding process context must be investigated.
 
-**Technology:** Python · Sysmon · Windows Event Logs · pywin32 · XML · Flask · Chart.js · MITRE ATT&CK
+The repository also documents engineering work still required before a reproducible deployment: reconciling the Python package/import layout, adding a dependency manifest, aligning the Flask template and static-file paths, separating example chart/sample alert data from live telemetry, and adding automated rule tests and measured false-positive evaluation. These limitations are kept visible so the project is presented accurately.
 
-### 03 · Additional web and product work
+**Technology used**
 
-**Sai Shradha Construction — interactive business website**  
-A React website experience organised around company information, services, project showcases, safety content and enquiries. The portfolio walkthrough includes a scroll-linked 3D construction sequence.  
-[View portfolio work](https://blue-crab-314523.hostingersite.com/#work)
+Python · Sysmon · Windows Event Logs · pywin32 · XML Parsing · Flask · HTML · CSS · Chart.js · MITRE ATT&CK
 
-**Varun & Co. — digital studio website**  
-A studio website presenting website development, business software, branding and digital-presence services, with a structured discovery-to-launch journey.  
-[Visit the website](https://blue-crab-314523.hostingersite.com)
-
-**Hardware e-commerce application — product catalogue and store administration**  
-A portfolio project covering computer-component discovery, cart and checkout, order history, and an admin dashboard for product and inventory management. It is presented through the portfolio; a separate public source repository is not currently linked.  
-[View portfolio work](https://blue-crab-314523.hostingersite.com/#work)
+[Source code and project documentation](https://github.com/varung4067-hash/soc-homelab-siem-project) · [Detection architecture](https://github.com/varung4067-hash/soc-homelab-siem-project/blob/main/docs/architecture.svg) · [Alert screenshot](https://github.com/varung4067-hash/soc-homelab-siem-project/blob/main/ALERTS.png)
 
 ---
 
 ## Technical toolkit
 
-| Area | Tools and technologies |
+| Area | Technologies and tools |
 |:--|:--|
-| Frontend | JavaScript, React, HTML5, CSS3, responsive UI development |
+| Frontend | JavaScript, React, TypeScript, HTML5, CSS3, Tailwind CSS, responsive UI |
 | Backend | Node.js, Express.js, REST APIs, Python, Flask |
 | Databases | MongoDB, MongoDB Atlas, Mongoose |
 | Payments and integrations | Razorpay, Resend, payment callbacks and webhooks |
 | Application security | JWT, bcryptjs, HTTP-only cookies, Helmet, CSP, CORS, rate limiting, server-side validation |
 | Security operations | Sysmon, Windows Event Logs, PowerShell, MITRE ATT&CK, alert triage |
-| Development workflow | Git, GitHub, debugging, documentation and deployment workflows |
 | Motion and 3D | Framer Motion, GSAP, ScrollTrigger, Three.js, React Three Fiber |
+| Development workflow | Git, GitHub, debugging, documentation, QA and deployment workflows |
 
 ## Education and professional background
 
@@ -150,10 +319,10 @@ Worked on an international Airbnb support process for six months, handling 1,000
 
 ## What I bring to a team
 
-- A practical end-to-end view of user journeys, APIs, data and third-party integrations.
-- Experience building and launching a client-facing web application.
-- Curiosity about secure application design and system behaviour.
-- Clear communication, ownership of debugging and willingness to learn through feedback.
+- An end-to-end perspective on customer journeys, APIs, data and third-party integrations.
+- Experience developing and launching a client-facing e-commerce application.
+- Curiosity about application security, endpoint telemetry and system behaviour.
+- Clear communication, practical debugging habits and willingness to learn through feedback.
 
 <div align="center">
   <h3>Let's build something useful.</h3>
