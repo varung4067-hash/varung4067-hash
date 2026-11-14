@@ -1,10 +1,11 @@
 <div align="center">
-  <img src="assets/varun-profile-hero.svg" alt="Varun Gupta — Full-Stack Developer" width="100%" />
+  <img src="https://images.pexels.com/photos/34804003/pexels-photo-34804003/free-photo-of-modern-workspace-with-laptop-and-code-display.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=560" alt="A real developer workspace with a laptop displaying code, photographed by Daniil Komov" width="100%" />
+  <sub>Workspace photograph by <a href="https://www.pexels.com/photo/modern-workspace-with-laptop-and-code-display-34804003/">Daniil Komov via Pexels</a></sub>
   <br/><br/>
-  <strong>Building useful digital products from interface to infrastructure.</strong>
+  <h1>VARUN GUPTA</h1>
+  <h3>Full-Stack Developer · Web Applications · Secure Workflows</h3>
+  <p>Turning business requirements into thoughtful, end-to-end web products.</p>
   <br/>
-  <sub>React · TypeScript · JavaScript · Node.js · Express · MongoDB</sub>
-  <br/><br/>
   <a href="https://blue-crab-314523.hostingersite.com">Portfolio</a>
   &nbsp;·&nbsp;
   <a href="https://strydegosox.com">Live client project</a>
@@ -13,19 +14,39 @@
   <br/><br/>
   <img src="https://img.shields.io/badge/FOCUS-Full--Stack%20Development-111827?style=flat-square" alt="Full-stack development"/>
   <img src="https://img.shields.io/badge/LOCATION-Mumbai%2C%20India-334155?style=flat-square" alt="Mumbai, India"/>
-  <img src="https://img.shields.io/badge/OPEN_TO-Junior%20Developer%20Roles-155e75?style=flat-square" alt="Open to junior developer roles"/>
+  <img src="https://img.shields.io/badge/OPEN_TO-Developer%20Opportunities-155e75?style=flat-square" alt="Open to developer opportunities"/>
 </div>
-
 ---
 
 ## Profile
 
-I build responsive websites and full-stack applications that connect polished user experiences with practical business workflows. My projects span e-commerce, business websites, admin dashboards, payment integrations and security tooling.
+I’m a full-stack developer who enjoys working where **product experience meets engineering reliability**. I like taking a real problem—an awkward customer journey, a manual business process or a fragile checkout flow—and turning it into a working application with a clear interface and dependable logic behind it.
 
-I enjoy working across the complete product lifecycle: understanding the problem, shaping the interface, building APIs and data flows, integrating services, and validating critical user journeys.
+My work covers the parts of a product that need to fit together: responsive frontend experiences, backend APIs, database models, authentication, third-party integrations and the operational tools people use after launch. I’m especially interested in the details that are easy to overlook but matter in real use: what happens when a payment is delayed, a customer clicks twice, stock changes during checkout, an API request fails or an admin action needs to be protected.
 
-**What I care about:** clear UX, maintainable code, secure-by-design workflows, and outcomes that can be explained with evidence.
+Recent work gives a flavour of that range:
+- **E-commerce engineering:** built a client store with Razorpay payment verification, webhook validation, duplicate-checkout safeguards, inventory reservation and admin order workflows.
+- **Interactive web experiences:** developed multi-page business websites with responsive React interfaces, motion design, project showcases and a scroll-linked 3D experience.
+- **Security engineering:** created a Python / Flask SIEM homelab that processes Sysmon and Windows Event Logs, enriches detections and maps activity to MITRE ATT&CK.
 
+### What I bring to a project
+
+| Focus | How I approach it |
+|:--|:--|
+| **Product thinking** | Start with the user journey and the business problem, not just the page or feature request. |
+| **End-to-end development** | Connect the interface, API, database and external services into one coherent workflow. |
+| **Security-minded engineering** | Keep sensitive decisions on the backend, validate inputs and payments, protect admin routes and handle retries carefully. |
+| **Interface craft** | Build responsive layouts with clear hierarchy, purposeful interactions and motion that supports the experience. |
+| **Practical problem-solving** | Debug across the stack, test failure paths and improve the parts that affect real users and operators. |
+| **Continuous learning** | Strengthen fundamentals while exploring better patterns, tools and ways to build maintainable software. |
+
+### How I like to work
+
+**Understand → Design → Build → Validate → Improve**
+
+I break a requirement into the complete user flow, identify the data and integrations it depends on, build the smallest coherent solution, and test both the happy path and the failure cases. I value readable implementation, honest documentation and measurable outcomes over inflated claims.
+
+**Currently interested in:** junior Full-Stack Developer, Frontend Developer and Node.js Developer opportunities, and teams where I can contribute to real products while continuing to grow as an engineer.
 ## Selected work
 
 ### 01 · StrydeGoSox
