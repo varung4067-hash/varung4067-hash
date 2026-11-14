@@ -1,23 +1,23 @@
 <div align="center">
-  <img src="https://images.pexels.com/photos/34804003/pexels-photo-34804003/free-photo-of-modern-workspace-with-laptop-and-code-display.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=560" alt="A real developer workspace with a laptop displaying code, photographed by Daniil Komov" width="100%" />
-  <sub>Workspace photograph by <a href="https://www.pexels.com/photo/modern-workspace-with-laptop-and-code-display-34804003/">Daniil Komov via Pexels</a></sub>
-  <br/><br/>
-  <h1>VARUN GUPTA</h1>
-  <h3>Full-Stack Developer · Web Applications · Secure Workflows</h3>
-  <p>Turning business requirements into thoughtful, end-to-end web products.</p>
-  <br/>
-  <a href="https://blue-crab-314523.hostingersite.com">Portfolio</a>
-  &nbsp;·&nbsp;
-  <a href="https://strydegosox.com">Live client project</a>
-  &nbsp;·&nbsp;
-  <a href="https://github.com/varung4067-hash?tab=repositories">Repositories</a>
-  <br/><br/>
-  <img src="https://img.shields.io/badge/FOCUS-Full--Stack%20Development-111827?style=flat-square" alt="Full-stack development"/>
+  <img src="assets/varun-profile-banner.svg" alt="Varun Gupta — Full-Stack Developer" width="100%" />
+</div>
+
+<div align="center">
+  <p><strong>Building useful digital products from interface to infrastructure.</strong><br/>
+  <sub>React · TypeScript · Node.js · Express · MongoDB · Razorpay</sub></p>
+  <p>
+    <a href="https://blue-crab-314523.hostingersite.com">Portfolio</a>
+    &nbsp;·&nbsp;
+    <a href="https://strydegosox.com">Live client project</a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/varung4067-hash?tab=repositories">Repositories</a>
+  </p>
+  <img src="https://img.shields.io/badge/FOCUS-Full--Stack%20Development-202a36?style=flat-square" alt="Full-stack development"/>
   <img src="https://img.shields.io/badge/LOCATION-Mumbai%2C%20India-334155?style=flat-square" alt="Mumbai, India"/>
   <img src="https://img.shields.io/badge/OPEN_TO-Developer%20Opportunities-155e75?style=flat-square" alt="Open to developer opportunities"/>
 </div>
----
 
+<hr/>
 ## Profile
 
 I’m a full-stack developer who enjoys working where **product experience meets engineering reliability**. I like taking a real problem—an awkward customer journey, a manual business process or a fragile checkout flow—and turning it into a working application with a clear interface and dependable logic behind it.
