@@ -50,7 +50,7 @@ I break a requirement into the complete user flow, identify the data and integra
 ## Selected work
 
 ### 01 · StrydeGoSox
-**Client e-commerce platform · Transaction security & order-integrity engineering** · <a href="https://strydegosox.com">Live website ↗</a> · <a href="https://github.com/varung4067-hash/strydegosox-ecommerce">GitHub repository ↗</a>
+**Client e-commerce platform · Transaction security & order-integrity engineering** · <a href="https://strydegosox.com">Live website ↗</a> · <a href="https://github.com/varung4067-hash/strydegosox-ecommerce">GitHub repository ↗</a> · <a href="https://github.com/varung4067-hash/strydegosox-ecommerce/blob/main/docs/ARCHITECTURE.md">Architecture ↗</a>
 
 <div align="center">
   <a href="https://strydegosox.com">
