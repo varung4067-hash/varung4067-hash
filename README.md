@@ -29,31 +29,72 @@ I enjoy working across the complete product lifecycle: understanding the problem
 ## Selected work
 
 ### 01 · StrydeGoSox
-**Client e-commerce platform** · <a href="https://strydegosox.com">Live website ↗</a>
+**Client e-commerce platform · Transaction security & order-integrity engineering** · <a href="https://strydegosox.com">Live website ↗</a>
 
-An end-to-end storefront for a consumer product brand, built to connect product discovery, checkout, payment verification and order operations.
+An end-to-end storefront for a consumer product brand, built to connect product discovery, checkout, payment verification, inventory operations and order fulfilment. A major part of the work was making the order lifecycle dependable—not simply making checkout look successful in the browser.
 
 **Business challenge**  
-The business needed a branded online shopping experience and a dependable workflow for accepting orders, validating payments, managing inventory and supporting fulfilment.
+An e-commerce checkout must handle more than successful purchases. It also needs to cope with altered browser data, forged payment confirmations, repeated clicks, gateway webhook retries, concurrent stock requests and refund edge cases. Without server-side controls, these situations can create false paid states, duplicate records or inconsistent inventory.
 
-**Solution delivered**
-- Responsive storefront with product pages, cart, checkout and order history.
-- Admin dashboard for catalogue, inventory and order management.
-- Node.js / Express REST API backed by MongoDB and Mongoose.
-- Razorpay integration with server-side price and stock validation, payment-signature checks and signed webhook handling.
-- JWT authentication, bcrypt password hashing, HTTP-only cookies, Helmet, restricted CORS and rate limiting.
-- Transactional order emails through Resend and transaction-aware inventory operations.
+**Transaction security & abuse-resistance controls**
 
-**Reported business activity**
+| Risk scenario | Safeguard implemented | Practical business value |
+|:--|:--|:--|
+| **Price tampering** | The backend rebuilds checkout pricing from trusted product records instead of trusting browser-submitted totals. | Helps prevent altered cart prices from becoming the amount charged or recorded for an order. |
+| **Fake payment-success response** | Server-side Razorpay checkout-signature verification, with checks for expected payment details, amount, currency and Razorpay order ownership. | The browser's success screen alone is not enough to mark an online order as paid; invalid or mismatched payment data should fail verification. |
+| **Forged payment webhook** | Razorpay webhook signature verification using the raw request body and configured webhook secret. | Helps reject spoofed payment-event notifications before the application processes them. |
+| **Repeated webhook delivery** | Processed-event tracking using the Razorpay event ID where available, deterministic SHA-256 fallback and unique database protection. | Makes gateway retries and duplicate event delivery less likely to trigger the same order/inventory side effect more than once. |
+| **Double-click / checkout retry** | Checkout idempotency using an `Idempotency-Key`. | Repeated submissions of the same checkout operation are handled as one intended request, reducing accidental duplicate order creation from impatient clicks, network retries or browser resubmissions. |
+| **Overselling / stock mismatch** | Server-side stock validation and transaction-aware inventory reservations: reserve while payment is pending, commit after successful capture, release on relevant failure/expiry paths and restore stock through refund workflows. | Helps protect stock availability during concurrent checkouts and reduces inventory drift when payments fail, expire or are refunded. |
+| **Repeated / competing refund actions** | Refund workflow includes concurrency protection, payment reconciliation and inventory restoration. | Helps prevent conflicting refund operations and keeps the order/payment/stock records aligned. |
+| **Admin endpoint abuse** | JWT-based admin authentication, role enforcement, bcrypt password hashing, HTTP-only secure session cookies, Helmet security headers and CSP, restricted CORS, rate limiting, request/input validation and no-store controls on sensitive APIs. | Protects privileged catalogue, inventory and order operations and reduces exposure to common request-abuse patterns. |
+| **Duplicate customer notifications** | Transactional email is triggered from backend order events; supported notification operations use idempotency safeguards. | Reduces repeat confirmation/status emails when a supported operation is retried. |
+
+**How the protected online-payment flow works**
+
+```mermaid
+flowchart TD
+    A[Customer submits cart] --> B[Backend loads trusted product prices]
+    B --> C[Validate stock and reserve inventory]
+    C --> D[Create payment order with Razorpay]
+    D --> E[Customer completes payment]
+    E --> F[Backend verifies signature, amount, currency and order ownership]
+    F -->|Valid| G[Commit payment and order state]
+    F -->|Invalid or mismatched| H[Do not treat order as paid]
+    I[Razorpay sends webhook] --> J[Verify webhook signature]
+    J --> K[Check event ID / deduplication record]
+    K --> L[Apply eligible event once]
+    G --> M[Update inventory and trigger relevant order notification]
+    L --> M
+```
+
+**What this changes for the business**
+- Makes online order confirmation depend on backend-verified payment data, not a customer-controlled browser response.
+- Reduces accidental duplicate order creation from repeated submissions of the same checkout request.
+- Reduces repeat processing when Razorpay retries or redelivers the same webhook event.
+- Helps prevent stock overselling and mismatches across pending payments, successful captures, failures, expiries and refunds.
+- Makes admin and order-management actions harder to invoke without the appropriate authenticated role.
+
+**Business activity reported by the client**
 
 | Client-reported metric | Context |
 |:--|:--|
 | **70 orders** | Reported during the first week after launch |
 | **500+ orders** | Reported during the first month |
 
-<sub>Order counts were reported by the client. They are not a measured conversion-rate, revenue or profit uplift.</sub>
+<sub>These are client-reported order counts, not a measured conversion-rate, revenue or profit uplift.</sub>
 
-**Technology:** `HTML` `CSS` `JavaScript` `Node.js` `Express` `MongoDB` `Mongoose` `Razorpay` `Resend` `JWT`
+**Can I claim a percentage of fake orders prevented?**  
+Not responsibly from the current evidence. The implementation documents the safeguards above, but it does not contain a measured denominator of fraudulent attempts, duplicate submissions or rejected payments. I therefore do **not** claim that the system prevents a specific percentage of fake orders.
+
+A defensible metric can be measured from production event logs:
+- **Duplicate checkout suppression rate** = duplicate checkout submissions safely deduplicated ÷ all identified repeated checkout submissions.
+- **Unverified payment rejection rate** = invalid or mismatched payment attempts rejected ÷ all payment-verification attempts.
+- **COD return/no-show rate** should be tracked separately. Razorpay verification protects online-payment state; it cannot prove that a cash-on-delivery customer will accept the parcel.
+
+**Technology:** `HTML` `CSS` `JavaScript` `Node.js` `Express` `MongoDB` `Mongoose` `Razorpay` `Resend` `JWT` `bcryptjs` `Helmet` `CORS` `express-rate-limit`
+
+<sub>Security scope note: these are application-level controls documented in the supplied project review. They are not a penetration-test certification or a guarantee against all fraud. Live effectiveness also depends on production secrets, gateway/database configuration, access policies, monitoring and end-to-end operational testing.</sub>
 
 ---
 
