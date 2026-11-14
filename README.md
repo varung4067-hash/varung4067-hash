@@ -52,10 +52,6 @@ A useful product is more than a collection of screens. The interface, applicatio
 
 <p><strong>Full-stack development · Checkout and payments · Inventory · Admin operations</strong></p>
 
-<img src="assets/strydegosox-project-visual.webp" alt="Concept artwork showing an e-commerce storefront on a laptop and mobile phone with sock products; presentation artwork, not a screenshot of the live application" width="100%" />
-
-<p align="center"><sub>Project concept artwork created for this portfolio. It is not a captured screen from the live site; actual application screenshots are shown below.</sub></p>
-
 **The product:** a live online store for a consumer product brand, connecting product discovery, product options, cart, checkout, online payments, Cash on Delivery, order fulfilment and the tools used to operate the store.
 
 **My contribution**
