@@ -114,6 +114,12 @@ A hands-on Windows endpoint-monitoring lab exploring how process-creation teleme
 
 A multi-section website concept for a construction business, designed to make the company’s capabilities and project work easier to understand and explore. The experience is organised around six key sections: Home, About, Services, Projects, Safety and Contact.
 
+**High-level experience architecture**
+
+<a href="assets/diagrams/sai-shradha-experience.svg"><img src="assets/diagrams/sai-shradha-experience.svg" alt="Sai Shradha Construction visitor journey, React sections and scroll-linked 3D experience" width="100%"/></a>
+
+<sub>This is an experience map based on the documented website scope; it is not a verified source-code dependency graph.</sub>
+
 **What I worked on**
 - Structured the content and navigation to help visitors move from company introduction to services and project examples.
 - Built reusable React components and responsive layouts for desktop and mobile.
@@ -135,6 +141,12 @@ A multi-section website concept for a construction business, designed to make th
 
 Varun & Co. is my digital studio website, built to communicate the studio’s services, show work and guide prospective clients towards starting a project. Its positioning is simple: helping businesses turn into brands through useful digital experiences.
 
+**High-level visitor journey and presentation architecture**
+
+<a href="assets/diagrams/varun-co-website.svg"><img src="assets/diagrams/varun-co-website.svg" alt="Varun and Co visitor journey through positioning, services, portfolio, process and enquiry" width="100%"/></a>
+
+<sub>This shows the published website journey and presentation layer; it does not imply a backend or database that has not been verified.</sub>
+
 **What the website includes**
 - Clear service categories: Website Development, Business Software, Branding & Digital Presence, and Hosting & Support.
 - A five-stage delivery story: Discovery → Strategy → Design → Development → Launch.
@@ -152,6 +164,12 @@ Varun & Co. is my digital studio website, built to communicate the studio’s se
 **Full-stack commerce application · Product management · Cart and checkout**
 
 A hardware-store application concept for browsing computer components and managing a product catalogue. The customer experience covers product discovery, cart, checkout and order history; the admin side is designed to let the store owner manage products, prices and stock without editing source files.
+
+**High-level commerce architecture**
+
+<a href="assets/diagrams/hardware-ecommerce.svg"><img src="assets/diagrams/hardware-ecommerce.svg" alt="Hardware e-commerce customer and administrator workflows connected to an Express API, MongoDB Atlas and commerce integrations" width="100%"/></a>
+
+<sub>This is an illustrative high-level map based on the available project description. Exact route, data-model and integration details need validation against the original source.</sub>
 
 **Core functionality**
 - Product catalogue for components such as graphics cards, processors, RAM, cases and motherboards.
