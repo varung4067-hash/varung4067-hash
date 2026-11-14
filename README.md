@@ -50,7 +50,7 @@ I break a requirement into the complete user flow, identify the data and integra
 ## Selected work
 
 ### 01 · StrydeGoSox
-**Client e-commerce platform · Transaction security & order-integrity engineering** · <a href="https://strydegosox.com">Live website ↗</a>
+**Client e-commerce platform · Transaction security & order-integrity engineering** · <a href="https://strydegosox.com">Live website ↗</a> · <a href="https://github.com/varung4067-hash/strydegosox-ecommerce">GitHub repository ↗</a>
 
 An end-to-end storefront for a consumer product brand, built to connect product discovery, checkout, payment verification, inventory operations and order fulfilment. A major part of the work was making the order lifecycle dependable—not simply making checkout look successful in the browser.
 
